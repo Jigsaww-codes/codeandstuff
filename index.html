@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're the love of my life</title>
+    <style>
+        :root {
+            --primary: #d81b60;
+            --secondary: #880e4f;
+            --bg: #fce4ec;
+            --accent: #fff9c4;
+        }
+
+        body {
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background-color 1s ease;
+            overflow-x: hidden;
+        }
+
+        #main-container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Initial Gift View */
+        #gift-box {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        #gift-box:hover { transform: scale(1.1) rotate(3deg); }
+
+        .gift-emoji { font-size: 120px; display: block; }
+        
+        .tap-text {
+            color: var(--secondary);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Surprise Content (Hidden Initially) */
+        #surprise {
+            display: none;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; }
+        
+        .message-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Top 5 List styling */
+        .top-moments {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 20px auto;
+            text-align: left;
+            border-left: 8px solid var(--primary);
+        }
+
+        .top-moments h3 { color: var(--primary); text-align: center; margin-top: 0; }
+
+        .moment-item { display: flex; align-items: flex-start; margin-bottom: 15px; }
+
+        .moment-num {
+            background: var(--primary);
+            color: white;
+            min-width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 4px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover { transform: scale(1.05) rotate(-2deg); }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .confetti { position: fixed; width: 10px; height: 10px; top: -10px; z-index: 999; }
+    </style>
+</head>
+<body>
+
+    <div id="main-container">
+        <div id="gift-box" onclick="startSurprise()">
+            <span class="gift-emoji">🎁</span>
+            <p class="tap-text">Open your surprise!</p>
+        </div>
+
+        <div id="surprise">
+            <h1>MYYYY BOYFRIENDDDDDD🎉</h1>
+            
+            <div class="message-box">
+                <p><strong>The Best part:</strong>You choosing me, I mean I know how hard it is to love me..and you still do it. My babbyyyyyyyy, thee best human to possibly exist in my life and you have no idea how blessed I am to have you by my side...my cutiee patootiee Or I'd say mera besan ka laddu. I loveeeee youuuu soooo muchhh "betuuu" hehehehe.</p>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+                <p><em><strong>For Youuuuuuu:</strong> You are one of those few people who know me in and out,all my secrets and all that I am and what I've always been; You probably don't have any idea of how wonderfull this feeling is to have you by my side as my partner,I mean you're too good to be true and the best to exist, Thanks for existing babydoll &hearts; Just stay by my side and be here;You probably don't know but I really want to you to be my forever. Even if "FOREVER" is a term used for memories and not people, YOU are that Memory of mine. Wait, did I say I loveee youu?? I LOVEEEEE YOUUUUU SOOOO MUCHHHHHH MYYY BABYYDOLLLL &hearts;.</em></p>
+            </div>
+
+            <div class="top-moments">
+                <h3>🏆 Top 5 Reasons YOU ARE ADORABLE</h3>
+                <div class="moment-item"><div class="moment-num">1</div><div><strong>Mr. Knows it all:</strong>You somehow know everythinG even after my hundredth attempt of hiding it.</div></div>
+                <div class="moment-item"><div class="moment-num">2</div><div><strong>The 2AM Philosopher:</strong> Alwayss there to motivate me throughout the toughest situation, even the simplest ones where I cry my eyes out.</div></div>
+                <div class="moment-item"><div class="moment-num">3</div><div><strong>The Survival Kit:</strong> Youuu have it all, like name it and my baby has it...anything and everything somehown everything fits in your pockets, I wonder howwww.</div></div>
+                <div class="moment-item"><div class="moment-num">4</div><div><strong>MY Home:</strong>Being close to you feels like being close to the feeling of "home", so now you know how I love being wrapped in your arms.</div></div>
+                <div class="moment-item"><div class="moment-num">5</div><div><strong>The Listener</strong>Love how you are so patient with every tantrum, every drama and how you just stay along,I doubt how you never had the thought to punch me in the face after all the chaos. khi khi khi. .</div></div>
+            </div>
+
+            <div class="gallery">
+                 <img src="https://drive.google.com/uc?export=view&id=1SmjN23odnfTpo-Z0zFrDjyN7PikL5qMs" alt="THE FIRST MEET">
+                 <img src="https://drive.google.com/uc?export=view&id=1O6VBJnptIYri5ZsDNev6WahZ-mCWzHTr" alt="The most awaited reunion">
+                 <img src="https://drive.google.com/uc?export=view&id=1PWZc_c39BZzyNvMit9lZd-dO342tzHPr" alt="Best of the chaos">
+                 <img src="https://drive.google.com/uc?export=view&id=18PNYurOMh3T7OzMy0kub0QQQkWi8n4p4" alt="Aren't we just perfect?">
+                <img src="https://drive.google.com/uc?export=view&id=1cJNgpSYXxaF1B9P27cQ3M7HOHTy_X-pm" alt="MY babyyy">
+               
+            </div>
+
+            <p style="margin-top: 40px; color: var(--secondary); font-weight: bold;">You are important more than you realise.</p>
+        </div>
+    </div>
+
+    <script>
+        function startSurprise() {
+            // Hide gift, show surprise
+            document.getElementById('gift-box').style.display = 'none';
+            const surprise = document.getElementById('surprise');
+            surprise.style.display = 'block';
+            
+            // Change background
+            document.body.style.backgroundColor = "#fff9c4";
+
+            // Trigger Confetti
+            for(let i=0; i<100; i++) {
+                createConfetti();
+            }
+        }
+
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * 100 + 'vw';
+            const colors = ['#ff4081', '#7c4dff', '#40c4ff', '#18ffff', '#b2ff59', '#ffeb3b'];
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            document.body.appendChild(confetti);
+
+            const animation = confetti.animate([
+                { top: '-10px', transform: 'rotate(0deg)' },
+                { top: '100vh', transform: `rotate(${Math.random() * 360}deg)` }
+            ], {
+                duration: Math.random() * 3000 + 2000,
+                easing: 'linear'
+            });
+
+            animation.onfinish = () => confetti.remove();
+        }
+    </script>
+</body>
+</html>
